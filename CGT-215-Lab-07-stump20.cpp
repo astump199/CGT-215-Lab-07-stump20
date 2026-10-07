@@ -105,12 +105,15 @@ int main()
 
         // Render frame
         window.clear(Color(0, 0, 0));
+
+        // Draw order: background objects first, boundaries on top
         window.draw(ball);
+        window.draw(centerBox);
         window.draw(floor);
         window.draw(ceiling);
         window.draw(leftWall);
         window.draw(rightWall);
-        window.draw(centerBox);
+
         window.display();
     }
 
